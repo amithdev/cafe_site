@@ -1,0 +1,290 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block body_class %}page-contact{% endblock %}
+
+{% block title %}Contact Us | Breads & Banter{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<header class="contact-hero" id="contact">
+  <div class="contact-hero__bg"></div>
+  <div class="contact-hero__overlay"></div>
+
+  <!-- NAVBAR (same structure as yours) -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="{% url 'home' %}">
+        <img src="{% static 'images/logo.png' %}" alt="Breads & Banter">
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="{% url 'about' %}">ABOUT US</a></li>
+        <li><a class="is-active" href="{% url 'contact' %}">CONTACT US</a></li>
+         <li><a href="{% url 'journals' %}">JOURNALS</a></li>
+
+      </ul>
+
+      <div class="nav__right"></div>
+    </div>
+
+    <div class="nav__divider"></div>
+  </nav>
+
+  <!-- Center text -->
+  <div class="contact-hero__content">
+    <h1 class="contact-hero__title">
+      We’d Love to<br>Welcome You.
+    </h1>
+
+    <p class="contact-hero__subtitle">
+      Whether you’re planning a visit, meeting friends over coffee, or just saying hello — we’re<br>
+      always happy to connect.
+    </p>
+  </div>
+</header>
+
+<!-- next section placeholder (your white section below hero) -->
+<section class="contact-section">
+  <div class="contact-section__inner">
+    <!-- you can build the “Visit Us” section here next -->
+  </div>
+</section>
+
+
+<section class="visit">
+  <div class="visit__inner">
+
+    <!-- LEFT -->
+    <div class="visit__left">
+      <h2 class="visit__title">Visit Us</h2>
+
+      <p class="visit__text">
+        Located in the heart of Brookefield, Breads &amp; Banter is a<br>
+        cozy space designed for slow mornings, long<br>
+        conversations, and comforting food.
+      </p>
+
+      <div class="visit__info">
+        <div class="visit__line"></div>
+
+        <div class="visit__blocks">
+          <!-- Address -->
+          <div class="visit__row">
+            <div class="visit__icon" aria-hidden="true">
+              <!-- location icon -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 11.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </div>
+
+            <div>
+              <div class="visit__label">ADDRESS</div>
+              <div class="visit__value">
+                543 Aecs layout main road, AECS Layout Brookefield,<br>
+                Marathahalli, Bengaluru, Karnataka 560037
+              </div>
+            </div>
+          </div>
+
+          <!-- Open daily -->
+          <div class="visit__row">
+            <div class="visit__icon" aria-hidden="true">
+              <!-- clock icon -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div>
+              <div class="visit__label">OPEN DAILY</div>
+              <div class="visit__value">09:00 AM – 11:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="visit__right">
+      <div class="visit__imgWrap">
+        <div class="visit__bgCard"></div>
+        <!-- replace with your image -->
+        <img class="visit__img" src="{% static 'images/visit.jpg' %}" alt="Cafe interior">
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="enquiry">
+  <div class="enquiry__inner">
+
+    <h2 class="enquiry__title">Reservations &amp; Enquiries.</h2>
+    <p class="enquiry__sub">
+      For table reservations, group visits, or special requests, feel free to reach out.<br>
+      We’ll do our best to make your visit special.
+    </p>
+
+    <div class="enquiry__cards">
+
+      <!-- Call -->
+      <div class="enquiry__card">
+        <div class="enquiry__icon" aria-hidden="true">
+          <!-- phone icon -->
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M8.8 10.2c1.3 2.6 3.4 4.7 6 6l1.8-1.8c.4-.4 1-.5 1.5-.3 1 .4 2 .6 3.1.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.7c.6 0 1 .4 1 1 0 1.1.2 2.1.6 3.1.2.5.1 1.1-.3 1.5L8.8 10.2Z"
+              stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="enquiry__label">CALL US</div>
+        <a class="enquiry__value" href="tel:+919072885511">+91 9072885511</a>
+      </div>
+
+      <!-- Email -->
+      <div class="enquiry__card">
+        <div class="enquiry__icon" aria-hidden="true">
+          <!-- mail icon -->
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.4" />
+            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="enquiry__label">EMAIL</div>
+        <a class="enquiry__value" href="mailto:breadsnbanter@gmail.com">breadsnbanter@gmail.com</a>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="enquiry__card">
+        <div class="enquiry__icon" aria-hidden="true">
+          <!-- chat icon -->
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M20 14a6 6 0 0 1-6 6H8l-4 2 1.2-3.8A6 6 0 0 1 4 14V8a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v6Z"
+              stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M8 10h8M8 13h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="enquiry__label">WHATSAPP</div>
+        <a class="enquiry__value" href="https://wa.me/919072885511" target="_blank" rel="noopener">Chat with Us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="drop" id="drop-message">
+  <div class="drop__inner">
+
+    <!-- Left: Form -->
+    <div class="drop__left">
+      <h2 class="drop__title">Drop Us a Message.</h2>
+
+      <form class="drop__form" method="post" action="{% url 'contact_send' %}">
+        {% csrf_token %}
+
+        <label class="drop__label" for="name">NAME</label>
+        <input class="drop__input" id="name" name="name" type="text" placeholder="Your Name" required>
+
+        <label class="drop__label" for="email">EMAIL</label>
+        <input class="drop__input" id="email" name="email" type="email" placeholder="email@example.com" required>
+
+        <label class="drop__label" for="message">MESSAGE</label>
+        <textarea class="drop__textarea" id="message" name="message" rows="4" placeholder="How we can help ?" required></textarea>
+
+        <div class="drop__bottom">
+          <button class="drop__btn" type="submit">
+            Send Message <span class="drop__arrow">→</span>
+          </button>
+
+          <div class="drop__note">We Usually Respond The Same Day.</div>
+        </div>
+
+        {% if messages %}
+          <div class="drop__flash">
+            {% for m in messages %}
+              <p class="drop__flashText">{{ m }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </form>
+    </div>
+
+    <!-- Right: Map -->
+    <div class="drop__right">
+      <h3 class="drop__mapTitle">Find Your Way to Us.</h3>
+
+      <!-- Clickable map opens Google Maps location -->
+      <a class="drop__mapLink"
+         href="https://www.google.com/maps/search/?api=1&query=Breads%20%26%20Banter%20Brookefield"
+         target="_blank" rel="noopener">
+        <iframe
+          class="drop__map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Breads%20%26%20Banter%20Brookefield&output=embed">
+        </iframe>
+      </a>
+    </div>
+
+  </div>
+
+  
+</section>
+<section class="stay">
+  <div class="stay__inner">
+    <h2 class="stay__title">Stay Connected.</h2>
+
+    <p class="stay__sub">
+      Follow Us For Daily Moments, Seasonal Specials, And Café Stories.
+    </p>
+
+    <div class="stay__links">
+      <a class="stay__link" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <span class="stay__icon" aria-hidden="true">
+          <!-- Instagram icon (SVG) -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor"
+              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/>
+          </svg>
+        </span>
+        <span class="stay__text">Instagram</span>
+      </a>
+
+      <a class="stay__link" href="https://www.google.com/search?q=Breads+%26+Banter+Brookefield" target="_blank" rel="noopener">
+        <span class="stay__icon" aria-hidden="true">
+          <!-- Store/Profile icon (SVG) -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor"
+              d="M4 4h16l-1.5 6H5.5L4 4zm2.2 8h11.6l.6 8H5.6l.6-8zM9 14h6v2H9v-2z"/>
+          </svg>
+        </span>
+        <span class="stay__text">Google Profile</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="events">
+  <div class="events__inner">
+    <h2 class="events__title">For Events & Collaborations.</h2>
+
+    <p class="events__sub">
+      From private gatherings to brand collaborations, we love creating<br>
+      meaningful experiences together.
+    </p>
+
+    <a class="events__btn" href="mailto:breadsnbnter@gmail.com?subject=Business%20Enquiry%20-%20Breads%20%26%20Banter">
+      CONTACT FOR BUSINESS ENQUIRIES
+    </a>
+  </div>
+</section>
+
+
+{% include "core/footer.html" %}
+{% endblock %}

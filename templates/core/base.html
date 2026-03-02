@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Cafe{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link rel="stylesheet" href="{% static 'css/journals.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400&family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  {% block content %}{% endblock %}
+
+
+    <div id="pageTransition" class="page-transition"></div>
+
+  <!-- ✅ Main JS -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <div id="pageCurtain"></div>
+
+  <!-- ✅ Page Transition JS -->
+  <script src="{% static 'js/page-transition.js' %}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.getElementById("reviewsSlider");
+    if (!slider) return;
+
+    const reviews = Array.from(slider.querySelectorAll(".review"));
+    if (reviews.length <= 1) return;
+
+    let current = reviews.findIndex(r => r.classList.contains("is-active"));
+    if (current < 0) current = 0;
+
+    const show = (index) => {
+      reviews[current].classList.remove("is-active");
+      current = index;
+      reviews[current].classList.add("is-active");
+    };
+
+    setInterval(() => {
+      show((current + 1) % reviews.length);
+    }, 5000);
+  });
+</script>
+
+</body>
+</html>

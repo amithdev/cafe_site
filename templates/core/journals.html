@@ -1,0 +1,295 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block body_class %}page-journal{% endblock %}
+
+{% block title %}Journal | Breads & Banter{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/journals.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<header class="journal-hero">
+  <!-- Background image -->
+  <div class="journal-hero__bg"
+       style="background-image:url('{% static "images/journal-hero.jpg" %}');"></div>
+
+  <!-- Dark overlay -->
+  <div class="journal-hero__overlay"></div>
+
+  <!-- Warm left glow like screenshot -->
+  <div class="journal-hero__glow"></div>
+
+  <!-- NAVBAR (reuse your exact navbar styles/classes) -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="{% url 'home' %}">
+        <img src="{% static 'images/logo.png' %}" alt="Breads & Banter">
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="{% url 'home' %}" class="nav-link">HOME</a></li>
+        <li><a href="{% url 'about' %}" class="nav-link">ABOUT US</a></li>
+        <li><a href="{% url 'contact' %}" class="nav-link">CONTACT US</a></li>
+        <li><a class="is-active nav-link" href="{% url 'journals' %}">JOURNAL</a></li>
+      </ul>
+
+      <div class="nav__right"></div>
+    </div>
+    <div class="nav__divider"></div>
+  </nav>
+
+  <!-- Center content -->
+  <div class="journal-hero__content">
+    <div class="journal-hero__kicker">EDITORIAL</div>
+
+    <h1 class="journal-hero__title">Journal.</h1>
+
+    <p class="journal-hero__subtitle">
+      A living collection of stories, craft, and quiet moments shaped in our kitchen,
+      our space, and the people who bring it to life.
+    </p>
+  </div>
+</header>
+
+<!-- Category Tabs Section -->
+<section class="journal-tabs">
+  <div class="journal-tabs__inner">
+
+    <button class="journal-tab is-active" data-filter="all">All Stories</button>
+    <button class="journal-tab" data-filter="food">Food &amp; Craft</button>
+    <button class="journal-tab" data-filter="coffee">Coffee &amp; Culture</button>
+    <button class="journal-tab" data-filter="space">Our Space</button>
+    <button class="journal-tab" data-filter="people">People</button>
+
+  </div>
+</section>
+<!-- Featured Story (exact like screenshot) -->
+<section class="journal-feature">
+  <div class="journal-feature__inner">
+
+    <div class="journal-feature__image-wrap">
+      <img
+        class="journal-feature__image"
+        src="{% static 'images/journal-feature.jpg' %}"
+        alt="Featured story image"
+      >
+    </div>
+
+    <div class="journal-feature__meta">
+      FOOD &amp; CULTURE <span class="dot">•</span> OCT 12, 2023
+    </div>
+
+    
+
+  </div>
+
+<!-- Journal Grid Section -->
+<section class="journal-grid">
+  <div class="journal-grid__inner">
+
+    <!-- Top Heading -->
+    <div class="journal-grid__top">
+      <h2 class="journal-grid__headline">The Art of Slow Food</h2>
+
+      <p class="journal-grid__sub">
+        Why taking time — in the kitchen and at the table — makes all the<br>
+        difference in how we connect, taste, and live.
+      </p>
+
+      <a class="journal-grid__cta" href="#">
+        Read Story <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Grid Cards -->
+    <div class="journal-grid__cards">
+
+      <!-- Card 1 -->
+      <article class="jcard">
+        <a class="jcard__img" href="#">
+          <img src="{% static 'images/journal-1.jpg' %}" alt="Coffee">
+        </a>
+
+        <div class="jcard__meta">COFFEE &amp; CULTURE</div>
+
+        <h3 class="jcard__title">
+          <a href="#">Coffee Rituals We Believe In</a>
+        </h3>
+
+        <p class="jcard__desc">
+          From the first grind to the final pour, exploring the sensory journey of our morning cup.
+        </p>
+
+        <a class="jcard__readmore" href="#">READ MORE</a>
+      </article>
+
+
+      <!-- Card 2 -->
+      <article class="jcard">
+        <a class="jcard__img" href="#">
+          <img src="{% static 'images/journal-2.jpg' %}" alt="Space">
+        </a>
+
+        <div class="jcard__meta">OUR SPACE</div>
+
+        <h3 class="jcard__title">
+          <a href="#">Designing Spaces for Comfort</a>
+        </h3>
+
+        <p class="jcard__desc">
+          How natural light, texture, and silence shaped the architecture of Breads &amp; Banter.
+        </p>
+
+        <a class="jcard__readmore" href="#">READ MORE</a>
+      </article>
+
+
+      <!-- Card 3 -->
+      <article class="jcard">
+        <a class="jcard__img" href="#">
+          <img src="{% static 'images/journal-3.jpg' %}" alt="Dish">
+        </a>
+
+        <div class="jcard__meta">STORIES &amp; PEOPLE</div>
+
+        <h3 class="jcard__title">
+          <a href="#">Behind Our Signature Dishes</a>
+        </h3>
+
+        <p class="jcard__desc">
+          Head Chef Marco reveals the childhood memories that inspired the Autumn harvest menu.
+        </p>
+
+        <a class="jcard__readmore" href="#">READ MORE</a>
+      </article>
+
+
+      <!-- Card 4 (Second Row Example) -->
+      <article class="jcard">
+        <a class="jcard__img" href="#">
+          <img src="{% static 'images/journal-4.jpg' %}" alt="Seasons">
+        </a>
+
+        <div class="jcard__meta">FOOD &amp; CRAFT</div>
+
+        <h3 class="jcard__title">
+          <a href="#">Sourcing the Seasons</a>
+        </h3>
+
+        <p class="jcard__desc">
+          A morning trip to the local farmers market to select the finest produce for the week.
+        </p>
+
+        <a class="jcard__readmore" href="#">READ MORE</a>
+      </article>
+
+
+      <!-- Card 5 -->
+      <article class="jcard">
+        <a class="jcard__img" href="#">
+          <img src="{% static 'images/journal-5.jpg' %}" alt="Cozy">
+        </a>
+
+        <div class="jcard__meta">OUR SPACE</div>
+
+        <h3 class="jcard__title">
+          <a href="#">Creating a Cozy Experience</a>
+        </h3>
+
+        <p class="jcard__desc">
+          The subtle art of hospitality and how we ensure every guest feels at home.
+        </p>
+
+        <a class="jcard__readmore" href="#">READ MORE</a>
+      </article>
+
+
+      <!-- Card 6 -->
+      <article class="jcard">
+        <a class="jcard__img" href="#">
+          <img src="{% static 'images/journal-6.jpg' %}" alt="Croissant">
+        </a>
+
+        <div class="jcard__meta">FOOD &amp; CRAFT</div>
+
+        <h3 class="jcard__title">
+          <a href="#">The Perfect Croissant</a>
+        </h3>
+
+        <p class="jcard__desc">
+          Layers of butter, patience, and technique. Dissecting the anatomy of our favorite pastry.
+        </p>
+
+        <a class="jcard__readmore" href="#">READ MORE</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+</section>
+
+<section class="stay">
+  <div class="stay__inner">
+    <h2 class="stay__title">Stay Connected.</h2>
+
+    <p class="stay__sub">
+      Follow Us For Daily Moments, Seasonal Specials, And Café Stories.
+    </p>
+
+    <div class="stay__links">
+      <a class="stay__link" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <span class="stay__icon" aria-hidden="true">
+          <!-- Instagram icon (SVG) -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor"
+              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/>
+          </svg>
+        </span>
+        <span class="stay__text">Instagram</span>
+      </a>
+
+      <a class="stay__link" href="https://www.google.com/search?q=Breads+%26+Banter+Brookefield" target="_blank" rel="noopener">
+        <span class="stay__icon" aria-hidden="true">
+          <!-- Store/Profile icon (SVG) -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor"
+              d="M4 4h16l-1.5 6H5.5L4 4zm2.2 8h11.6l.6 8H5.6l.6-8zM9 14h6v2H9v-2z"/>
+          </svg>
+        </span>
+        <span class="stay__text">Google Profile</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Then your footer -->
+{% include "core/footer.html" %}
+
+
+<script>
+  // Tabs active underline + optional filtering (nice UX)
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".journal-tab");
+    const cards = document.querySelectorAll(".post-card");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("is-active"));
+        tab.classList.add("is-active");
+
+        const filter = tab.dataset.filter;
+        if (!cards.length) return;
+
+        cards.forEach(card => {
+          const cat = card.dataset.cat;
+          const show = (filter === "all") || (cat === filter);
+          card.style.display = show ? "block" : "none";
+        });
+      });
+    });
+  });
+</script>
+
+{% endblock %}

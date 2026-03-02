@@ -1,0 +1,51 @@
+{% load static %}
+
+<header class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <!-- Left logo -->
+      <a class="nav__logo" href="/">
+        <img src="{% static 'images/logo.png' %}" alt="Breads & Banter">
+      </a>
+
+      <!-- Center links -->
+      <ul class="nav__links">
+        <li><a class="is-active" href="#home">HOME</a></li>
+        <li><a href="{% url 'about' %}">ABOUT US</a></li>
+
+        <li><a href="/contact/">CONTACT US</a></li>
+        <li><a href="{% url 'journals' %}">JOURNALS</a></li>
+
+      </ul>
+
+      <!-- Right empty space (keeps center perfectly aligned like screenshot) -->
+      <div class="nav__right"></div>
+    </div>
+
+    <div class="nav__divider"></div>
+  </nav>
+
+  <div class="hero__content">
+    <div class="hero__pill">EST. 2019 • BROOKEFIELD • BANAGLORE</div>
+
+    <h1 class="hero__title">A Cozy Place Of Happiness.</h1>
+
+    <p class="hero__subtitle">
+      A cozy gourmet café in Brookefield, serving thoughtfully crafted cuisine<br>
+      since 2017. Come slow down, unwind, and feel at home.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#book">
+        Book a Table <span class="btn__arrow">→</span>
+      </a>
+
+      <a class="btn btn--ghost" href="#menu">
+        View Menu <span class="btn__icon">☕</span>
+      </a>
+    </div>
+  </div>
+</header>

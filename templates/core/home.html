@@ -1,0 +1,446 @@
+{% extends "core/base.html" %}
+
+{% block title %}Home | Breads & Banter{% endblock %}
+
+{% block content %}
+  {% load static %}
+
+  {% include "core/partials/header.html" %}
+
+  <!-- OUR NEIGHBORHOOD SECTION -->
+  <section class="neighborhood" id="about">
+    <div class="neighborhood__container">
+
+      <!-- LEFT -->
+      <div class="neighborhood__left">
+        <div class="neighborhood__kicker">OUR NEIGHBORHOOD</div>
+
+        <h2 class="neighborhood__title">
+          Located in the Heart of<br>
+          <span>Brookefield.</span>
+        </h2>
+
+        <p class="neighborhood__text">
+          Nestled between the old cobblestone library and the morning sun, our flagship location
+          has been a cornerstone of the Brookefield community for over a decade. It is a space
+          where the aroma of sourdough meets the rhythm of the city.
+        </p>
+
+        <div class="neighborhood__meta">
+          <div class="meta__line"></div>
+
+          <div class="meta__items">
+            <div class="meta__item">
+              <div class="meta__icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24" class="meta__svg">
+    <path d="M12 22s7-4.4 7-12a7 7 0 1 0-14 0c0 7.6 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  </svg>
+</div>
+
+              <div>
+                <div class="meta__label">ADDRESS</div>
+                <div class="meta__value">402 AECS Layout, Brookefield, Bangalore 5600103</div>
+              </div>
+            </div>
+
+            <div class="meta__item">
+             <div class="meta__icon">🕒</div>
+
+              <div>
+                <div class="meta__label">OPEN DAILY</div>
+                <div class="meta__value">09:00 AM — 11:00 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="neighborhood__link" href="https://maps.google.com" target="_blank">
+          View On Google Maps <span>→</span>
+        </a>
+      </div>
+
+      <!-- RIGHT -->
+<div class="neighborhood__right">
+  <div class="neighborhood__imgwrap">
+    <img src="{% static 'images/neighborhood.jpg' %}" alt="Cafe interior">
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- QUOTE SECTION -->
+<section class="quote-section" id="quote">
+  <div class="quote-section__container">
+    <div class="quote-section__watermark"></div>
+
+    <blockquote class="quote-section__quote">
+      “Where craftsmanship meets<br>
+      hospitality — every plate tells a story.”
+    </blockquote>
+  </div>
+</section>
+
+
+<!-- OUR BEGINNING SECTION -->
+<section class="beginning" id="story">
+  <div class="beginning__container">
+
+    <!-- LEFT IMAGE -->
+    <div class="beginning__left">
+      <div class="beginning__imgwrap">
+        <img src="{% static 'images/beginning.jpg' %}" alt="Cafe interior">
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="beginning__right">
+      <p class="beginning__kicker">OUR BEGINNING</p>
+
+      <h2 class="beginning__title">
+        Rooted in Craft,<br>
+        <span>Built on Warmth.</span>
+      </h2>
+
+      <p class="beginning__text">
+        It began with a simple premise in 2017: that a neighborhood café could be more than just a stop for caffeine—it could be the living room of the community.
+      </p>
+
+      <p class="beginning__text">
+        Tucked away in a quiet corner of Brookefield, Breads &amp; Banter was born from a desire to slow down time. We focused on the patience of slow-fermented dough, the ritual of pour-over coffee, and creating a sanctuary where conversations could unfold without urgency.
+      </p>
+
+      <a class="beginning__link" href="#story">
+        Read Our Story <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+<section class="menu-highlights">
+  <div class="menu-highlights__container">
+
+    <div class="menu-highlights__top">
+      <div>
+        <p class="menu-kicker">MENU HIGHLIGHTS</p>
+        <h2 class="menu-title">House Specialties</h2>
+      </div>
+
+      <a class="menu-link" href="{% url 'full_menu' %}">
+        Explore Full Menu <span>→</span>
+      </a>
+    </div>
+
+    <!-- ✅ IMPORTANT: menu-row > menu-track > menu-card -->
+    <div class="menu-row">
+      <div class="menu-track">
+
+        <!-- CARD 1 -->
+        <article class="menu-card">
+          <div class="menu-card__img">
+            <img src="{% static 'images/menu1.jpg' %}" alt="Mexicana Pizza">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__name">Mexicana Pizza</h3>
+            <p class="menu-card__desc">
+              A spicy, vibrant feast featuring zesty jalapeños, seasoned ground beef, and fresh veggies.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="menu-card">
+          <div class="menu-card__img">
+            <img src="{% static 'images/menu2.jpg' %}" alt="Pasta Formaggio">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__name">Pasta Formaggio</h3>
+            <p class="menu-card__desc">
+              A creamy blend of artisan cheeses with herbs and al dente pasta — rich, comforting.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="menu-card">
+          <div class="menu-card__img">
+            <img src="{% static 'images/menu3.jpg' %}" alt="Aglio E Olio">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__name">Aglio E Olio</h3>
+            <p class="menu-card__desc">
+              Golden garlic, olive oil, chili flakes, and fresh parsley — aromatic classic.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="menu-card">
+          <div class="menu-card__img">
+            <img src="{% static 'images/menu4.jpg' %}" alt="BBQ Pizza">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__name">BBQ Pizza</h3>
+            <p class="menu-card__desc">
+              Smoky barbeque chicken, caramelized onions, and melted mozzarella — finished with char.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 5 (this will be partially visible) -->
+        
+    <!-- CARD 5 (DISABLED / PARTIAL) -->
+    <article class="menu-card menu-card--disabled">
+      <div class="menu-card__img">
+        <img src="{% static 'images/menu3.jpg' %}">
+      </div>
+      <div class="menu-card__body">
+        <h3 class="menu-card__name">Coming Soon</h3>
+        <p class="menu-card__desc">
+          More house specials arriving shortly.
+        </p>
+      </div>
+    </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== OUR GALLERY SECTION (AFTER MENU) ===== -->
+<section class="gallery">
+  <div class="gallery__container">
+
+    <div class="gallery__top">
+      <div>
+        <p class="gallery__kicker">OUR GALLERY</p>
+
+        <h2 class="gallery__title">
+          Designed for <span>Slow Moments</span><br>
+          and Warm Conversations.
+        </h2>
+      </div>
+
+      <a class="gallery__link" href="#">
+        See More Photos <span>→</span>
+      </a>
+    </div>
+
+    <!-- GRID -->
+    <div class="gallery__grid">
+      <!-- Left big image -->
+      <div class="gallery__item gallery__item--left">
+        <img src="{% static 'images/gallery1.jpg' %}" alt="Cafe entrance">
+      </div>
+
+      <!-- Middle tall image -->
+      <div class="gallery__item gallery__item--mid">
+        <img src="{% static 'images/gallery2.jpg' %}" alt="Seating area">
+      </div>
+
+      <!-- Right column -->
+      <div class="gallery__right">
+        <div class="gallery__item gallery__item--rightTop">
+          <img src="{% static 'images/gallery3.jpg' %}" alt="Cafe interior">
+        </div>
+<div class="gallery__quote">
+  <p>
+    “WE CARE AS MUCH ABOUT<br>
+    THE WARMTH OF OUR<br>
+    SPACE AS THE FLAVORS ON<br>
+    YOUR PLATE.”
+  </p>
+</div>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="team">
+  <div class="team__container">
+
+    <div class="team__top">
+      <div class="team__left">
+        <p class="team__kicker">OUR TEAM</p>
+        <h2 class="team__title">The Faces Behind the <span>Warmth.</span></h2>
+      </div>
+
+      <p class="team__desc">
+        Hospitality is a craft, and our team are the artisans. Many have been with us since the very first loaf was baked.
+      </p>
+    </div>
+
+    <!-- ✅ Important: row -> track -> member -->
+    <div class="team__row">
+      <div class="team__track">
+
+        <!-- MEMBER 1 -->
+        <article class="team__member">
+          <div class="team__photo">
+            <img src="{% static 'images/team1.jpg' %}" alt="Elias Thorne">
+          </div>
+          <div class="team__meta">
+            <h3 class="team__name">Elias Thorne</h3>
+            <p class="team__role">HEAD BAKER</p>
+            <p class="team__tenure">With Us For 10 Years.</p>
+          </div>
+        </article>
+
+        <!-- MEMBER 2 -->
+        <article class="team__member">
+          <div class="team__photo">
+            <img src="{% static 'images/team2.jpg' %}" alt="Sarah Jenkins">
+          </div>
+          <div class="team__meta">
+            <h3 class="team__name">Sarah Jenkins</h3>
+            <p class="team__role">GENERAL MANAGER</p>
+            <p class="team__tenure">With Us For 5 Years.</p>
+          </div>
+        </article>
+
+        <!-- MEMBER 3 -->
+        <article class="team__member">
+          <div class="team__photo">
+            <img src="{% static 'images/team3.jpg' %}" alt="Marcus Lee">
+          </div>
+          <div class="team__meta">
+            <h3 class="team__name">Marcus Lee</h3>
+            <p class="team__role">HEAD OF COFFEE</p>
+            <p class="team__tenure">With Us For 4 Years.</p>
+          </div>
+        </article>
+
+        <!-- MEMBER 4 (PARTIAL + DISABLED like screenshot) -->
+        <article class="team__member team__member--disabled">
+          <div class="team__photo">
+            <img src="{% static 'images/team4.jpg' %}" alt="Coming Soon">
+          </div>
+          <div class="team__meta">
+            <h3 class="team__name">More Soon</h3>
+            <p class="team__role">NEW MEMBER</p>
+            <p class="team__tenure">Joining Shortly.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="reviews">
+  <div class="reviews__container">
+
+    <div class="reviews__grid">
+
+      <!-- LEFT -->
+      <div class="reviews__left">
+        <!-- stars -->
+        <div class="reviews__stars" aria-label="5 star rating">
+          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+
+        <!-- rotating quote -->
+        <div class="reviews__slider" id="reviewsSlider">
+
+          <!-- REVIEW 1 -->
+          <article class="review is-active">
+            <p class="review__quote">
+              “An Absolute Sanctuary In The City. The Pastries Are Divine, But The Atmosphere Keeps You Coming Back.”
+            </p>
+          </article>
+
+          <!-- REVIEW 2 -->
+          <article class="review">
+            <p class="review__quote">
+              “Beautiful place to work and unwind. Coffee is excellent, and the staff are genuinely warm.”
+            </p>
+          </article>
+
+          <!-- REVIEW 3 -->
+          <article class="review">
+            <p class="review__quote">
+              “The bread is amazing — fresh, flavorful, and worth the visit. Cozy vibes throughout.”
+            </p>
+          </article>
+
+          <!-- REVIEW 4 -->
+          <article class="review">
+            <p class="review__quote">
+              “Tried the pasta and dessert combo — everything felt handcrafted. Calm, clean, and premium.”
+            </p>
+          </article>
+
+        </div>
+
+        <div class="reviews__divider"></div>
+
+        <div class="reviews__bottom">
+          <div class="reviews__meta">
+            <p class="reviews__source">GOOGLE REVIEWS</p>
+            <p class="reviews__rating">4.3/5 Average Rating</p>
+          </div>
+
+          <!-- ✅ change this URL to your reviews page OR remove href if not ready -->
+          <a class="reviews__link" href="#">
+            Read All Reviews <span>→</span>
+          </a>
+        </div>
+
+        <!-- optional controls -->
+        <div class="reviews__controls">
+          <button class="reviews__btn" type="button" data-dir="-1" aria-label="Previous review">‹</button>
+
+          <div class="reviews__dots" aria-label="Review pagination">
+            <button type="button" class="dot is-active" aria-label="Go to review 1"></button>
+            <button type="button" class="dot" aria-label="Go to review 2"></button>
+            <button type="button" class="dot" aria-label="Go to review 3"></button>
+            <button type="button" class="dot" aria-label="Go to review 4"></button>
+          </div>
+
+          <button class="reviews__btn" type="button" data-dir="1" aria-label="Next review">›</button>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="reviews__right">
+        <div class="reviews__img">
+          <img src="{% static 'images/review-coffee.jpg' %}" alt="Coffee on table">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNERSHIP CTA (AFTER REVIEWS) ================= -->
+<section class="partner-cta">
+  <div class="partner-cta__inner">
+    <h2 class="partner-cta__title">
+      Let’s Create Meaningful <span>Partnerships</span>.
+    </h2>
+
+    <p class="partner-cta__text">
+      Whether you are looking to invest, collaborate on an event, or source premium<br>
+      baked goods for your establishment, we invite you to start a conversation.
+    </p>
+
+    <a href="{% url 'contact' %}" class="partner-cta__btn">
+      CONTACT FOR BUSINESS ENQUIRIES
+    </a>
+  </div>
+
+  <!-- divider line under CTA like screenshot -->
+  <div class="partner-cta__divider"></div>
+</section>
+
+
+{% include "core/footer.html" %}
+{% endblock %}

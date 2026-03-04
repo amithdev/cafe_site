@@ -16,18 +16,16 @@ body{font-family: Arial, Helvetica, sans-serif;background:#0b0b0b}
 .hero__bg{
   position:absolute;
   inset:0;
-  background: url("../images/hero.jpg") center/cover no-repeat;
+  background: url("../images/hero (2).jpg") center/cover no-repeat;
   transform: scale(1.02);
-  filter: blur(2px);
+  
 }
 
 /* warm dark overlay like screenshot */
 .hero__overlay{
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.55) 100%),
-    rgba(120, 55, 0, 0.25);
+  
 }
 
 /* NAVBAR */
@@ -39,12 +37,12 @@ body{font-family: Arial, Helvetica, sans-serif;background:#0b0b0b}
 
 .nav__inner{
   width: min(1200px, 92%);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-      bottom: 36px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 50px;
 }
 
 .nav__logo{
@@ -94,7 +92,7 @@ body{font-family: Arial, Helvetica, sans-serif;background:#0b0b0b}
 /* thin divider line */
 .nav__divider{
   width: min(1200px, 92%);
-  margin: 16px auto 0;
+  margin: -19px auto 0;
   height: 1px;
   background: rgba(255,255,255,0.22);
 }

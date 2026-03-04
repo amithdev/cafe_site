@@ -2,7 +2,8 @@
 .journal-hero{
   position: relative;
   
-    min-height: 750px;
+   min-height: 620px;
+  height: 78vh;
   overflow: hidden;
   background: #0b0b0b;
 }
@@ -28,9 +29,7 @@
 .journal-hero__glow{
   position:absolute;
   inset:0;
-  background:
-    radial-gradient(70% 120% at 10% 35%, rgba(170,110,35,0.65) 0%, rgba(0,0,0,0) 60%),
-    radial-gradient(60% 100% at 0% 30%, rgba(140,85,20,0.40) 0%, rgba(0,0,0,0) 55%);
+  
   pointer-events:none;
 }
 
@@ -362,7 +361,7 @@
 =================================*/
 
 .page-journal .stay{
-  background: #000000;
+  background: #1b1b1b;
   padding: 127px 0 110px;
 }
 

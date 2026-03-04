@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config("SECRET_KEY", default="dev-secret-key")
 DEBUG = config("DEBUG", default=True, cast=bool)
-ALLOWED_HOSTS = [h for h in config("ALLOWED_HOSTS", default="").split(",") if h]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Good for production (compressed caching)
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

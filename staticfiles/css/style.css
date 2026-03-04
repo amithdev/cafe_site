@@ -1,0 +1,1890 @@
+/* reset */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family: Arial, Helvetica, sans-serif;background:#0b0b0b}
+
+
+
+/* HERO wrapper */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* background image */
+.hero__bg{
+  position:absolute;
+  inset:0;
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  transform: scale(1.02);
+  filter: blur(2px);
+}
+
+/* warm dark overlay like screenshot */
+.hero__overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.55) 100%),
+    rgba(120, 55, 0, 0.25);
+}
+
+/* NAVBAR */
+.nav{
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+}
+
+.nav__inner{
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+      bottom: 36px;
+}
+
+.nav__logo{
+  position: absolute;
+  left: 0;
+}
+
+.nav__links{
+  list-style: none;
+  display: flex;
+  gap: 46px;
+  justify-content: center;
+}
+
+
+
+.nav__logo img{
+  height: 34px;
+  width: auto;
+  display:block;
+  opacity: 0.95;
+}
+
+.nav__links{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap: 46px;
+}
+
+.nav__links a{
+  text-decoration:none;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  color: rgba(255,255,255,0.80);
+  font-weight: 50px;
+}
+
+.nav__links a.is-active{
+  color: rgba(255,255,255,0.95);
+}
+
+.nav__links a:hover{
+  color:#fff;
+}
+
+/* thin divider line */
+.nav__divider{
+  width: min(1200px, 92%);
+  margin: 16px auto 0;
+  height: 1px;
+  background: rgba(255,255,255,0.22);
+}
+
+/* HERO CONTENT */
+.hero__content{
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 90px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding: 50px 16px 80px;
+}
+
+/* pill tag */
+.hero__pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height: 26px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #8E5207;
+  background: #35140499;
+  color: rgba(255,255,255,0.75);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin-bottom: 18px;
+backdrop-filter: blur(2px);   /* optional: premium glass feel */
+}
+
+/* big title */
+.hero__title{
+  font-family: Georgia, "Times New Roman", serif;
+  color: rgba(255,255,255,0.95);
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1.05;
+  text-shadow: 0 12px 28px rgba(0,0,0,0.6);
+  margin-bottom: 14px;
+}
+
+.hero__subtitle{
+   font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;        /* Regular */
+  font-size: 20px;
+  line-height: 150%;
+
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(255,255,255,0.78);
+
+  margin-bottom: 26px;
+}
+
+/* Buttons */
+.hero__actions{
+  display:flex;
+  gap: 14px;
+  justify-content:center;
+  align-items:center;
+}
+
+.btn{
+  height: 42px;
+  padding: 0 22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  text-decoration:none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;        /* Medium */
+  font-size: 16px;
+  line-height: 100%;
+
+  letter-spacing: 0%;
+  transition: transform .15s ease;
+}
+
+.btn:hover{ transform: translateY(-1px); }
+
+.btn--primary{
+  background: #f4f1ea;
+  color: #1c1c1c;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.btn--ghost{
+  background: rgba(0,0,0,0.18);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.22);
+}
+
+.btn__arrow{ font-size: 16px; line-height: 1; }
+.btn__icon{ font-size: 14px; line-height: 1; }
+
+/* Responsive (keep same feel) */
+@media (max-width: 900px){
+  .hero__title{ font-size: 50px; }
+  .nav__inner{ grid-template-columns: 140px 1fr 140px; }
+  .nav__links{ gap: 22px; }
+}
+@media (max-width: 600px){
+  .nav__links{ display:none; }
+  .hero__title{ font-size: 38px; }
+  .hero__subtitle{ font-size: 14px; }
+  .hero__actions{ flex-direction: column; }
+  .btn{ width: 220px; }
+}
+
+/* ===== OUR NEIGHBORHOOD (UPDATED TO MATCH FIGMA SS) ===== */
+.neighborhood{
+  background: #fbf7f1;
+  padding: 155px 0;
+  overflow: hidden; /* allows image to bleed to right like Figma */
+}
+
+.neighborhood__container{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 90px;
+  align-items: start;
+}
+
+/* left text */
+.neighborhood__kicker{
+    font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 800;       /* Medium */
+  font-size: 20px;
+  line-height: 120%;
+
+  letter-spacing: 0.08em;  /* ✅ 8% spacing */
+  
+
+  text-transform: uppercase;
+  color: #8b5a2b;
+  margin-bottom: 28px;
+}
+
+.neighborhood__title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 53px;
+  font-weight: 500;
+  line-height: 1.08;
+  color: #3a3a3a;
+  margin-bottom: 26px;
+}
+
+.neighborhood__title span{
+  font-style: italic;
+  color: #8b5a2b;
+}
+
+.neighborhood__text{
+  max-width: 637px;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+
+  color: #777;
+  margin-bottom: 60px;
+}
+
+/* meta block with vertical line */
+.neighborhood__meta{
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 22px;
+  margin-bottom: 52px;
+}
+
+.meta__line{
+  width: 1px;
+  background: rgba(139, 90, 43, 0.35);
+  margin-top: 10px;
+  height: 170px;
+}
+
+.meta__items{
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.meta__item{
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.meta__icon{
+  width: 28px;
+  height: 28px;
+  color: #8b5a2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.meta__svg{
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.meta__label{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2.2px;
+  font-weight: 800;
+  color: #8b5a2b;
+  margin-bottom: 10px;
+}
+
+.meta__value{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 20px;
+  color: #777;
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+.meta__icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* google maps link */
+.neighborhood__link{
+  font-family: "IBM Plex Sans", sans-serif;
+
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  color: #8b5a2b;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(139, 90, 43, 0.55);
+}
+
+.neighborhood__link span{
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+/* RIGHT IMAGE — pushed to extreme right like Figma */
+.neighborhood__right{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 18px;
+
+  /* push to extreme right */
+  margin-right: calc(( 70vw - min(1240px, 92%)) / -2);
+}
+
+
+/* image size (closer to Figma proportions) */
+.neighborhood__imgwrap{
+  position: relative;
+  width: 760px;       /* use this, NOT 820px */
+  max-width: 100%;
+  z-index: 1;
+}
+
+/* backplate behind image */
+.neighborhood__imgwrap::before{
+  content: "";
+  position: absolute;
+  left: -55px;        /* visible on left */
+  bottom: -55px;      /* visible on bottom */
+  width: 92%;
+  height: 96%;
+  background: #f2e6d6;
+  z-index: -1;
+}
+
+.neighborhood__imgwrap img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* responsive */
+@media (max-width: 1100px){
+  .neighborhood__container{
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  /* stop bleeding on smaller screens */
+  .neighborhood__right{
+    justify-content: flex-start;
+    margin-right: 0;
+  }
+
+  .neighborhood__imgwrap{
+    width: min(680px, 100%);
+  }
+}
+
+@media (max-width: 600px){
+  .neighborhood{
+    padding: 70px 0;
+  }
+
+  .neighborhood__title{
+    font-size: 40px;
+  }
+
+  .neighborhood__text,
+  .meta__value{
+    font-size: 16px;
+  }
+
+  .neighborhood__imgwrap::before{
+    left: -18px;
+    bottom: -18px;
+  }
+}
+
+/* ===== QUOTE SECTION — MATCH YOUR 1ST IMAGE ===== */
+.quote-section{
+  background: #FFF8ED;        /* exact cream */
+  padding: 35px 0;            /* less vertical padding */
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-section__container{
+  
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  position: relative;
+
+  height: 330px;              /* fixed height like your SS */
+  display: flex;
+  justify-content: center;
+
+  /* move quote slightly up */
+  align-items: flex-start;
+  padding-top: 105px;
+  text-align: center;
+}
+
+/* watermark — move it up and keep it smaller */
+.quote-section__watermark{
+  position: absolute;
+  left: -30px;
+
+  /* watermark higher like your SS */
+  top: 56%;
+  transform: translateY(-50%);
+
+  width: 440px;
+  height: 300px;
+  opacity: 0.055;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360' viewBox='0 0 520 360'%3E%3Cg fill='none' stroke='%238b5a2b' stroke-width='2'%3E%3Cpath d='M60 210l110-64 110 64-110 64z'/%3E%3Cpath d='M140 140l110-64 110 64-110 64z'/%3E%3Cpath d='M90 70l90-52 90 52-90 52z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.quote-section__quote{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #3a3a3a;
+  max-width: 760px;
+  margin: 0;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .quote-section{
+    padding: 75px 0;
+  }
+  .quote-section__container{
+    height: 260px;
+    padding-top: 80px;
+  }
+  .quote-section__quote{
+    font-size: 30px;
+  }
+  .quote-section__watermark{
+    width: 320px;
+    height: 220px;
+    left: -20px;
+    top: 45%;
+  }
+}
+
+@media (max-width: 600px){
+  .quote-section__container{
+    height: auto;
+    padding: 70px 0;
+    align-items: center;
+  }
+  .quote-section__quote{
+    font-size: 24px;
+  }
+  .quote-section__watermark{
+    display: none;
+  }
+}
+/* ===== OUR BEGINNING (FIGMA MATCH - IMAGE + BACKPLATE FIX) ===== */
+.beginning{
+  background: #FFFCF9;
+  padding: 175px 0;
+
+  /* IMPORTANT: do NOT hide overflow or your beige plate can get clipped */
+  overflow: visible;
+}
+
+.beginning__container{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 90px;
+  align-items: start;
+}
+
+/* LEFT IMAGE */
+.beginning__left{
+  display: flex;
+  align-items: flex-start;
+}
+
+.beginning__imgwrap{
+  position: relative;
+  width: 720px;
+  max-width: none;
+
+  /* EXTREME LEFT ALIGN (FIGMA STYLE) */
+  margin-left: calc((75vw - min(1240px, 92%)) / -2);
+  z-index: 1;
+}
+
+/* Beige backplate behind image (right + bottom) */
+.beginning__imgwrap::before{
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -70px;
+
+  width: 78%;
+  height: 92%;
+  background: #f2e6d6;
+  z-index: -1;
+}
+
+/* Image crop like Figma (tall rectangle) */
+.beginning__imgwrap img{
+  width: 100%;
+  height: 637px;         /* gives same tall feel */
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+/* RIGHT CONTENT */
+.beginning__kicker{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2.4px;
+  font-weight: 800;
+  color: #8b5a2b;
+  margin-bottom: 28px;
+}
+
+.beginning__title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.08;
+  color: #3a3a3a;
+  margin-bottom: 28px;
+}
+
+.beginning__title span{
+  font-style: italic;
+  color: #8b5a2b;
+}
+
+.beginning__text{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  color: #777;
+  font-size: 20px;
+  line-height: 1.75;
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+.beginning__link{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 28px;
+  color: #8b5a2b;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(139, 90, 43, 0.55);
+}
+
+.beginning__link span{
+  font-size: 18px;
+  transform: translateY(1px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px){
+  .beginning__container{
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .beginning__imgwrap{
+    width: min(720px, 100%);
+  }
+
+  .beginning__imgwrap img{
+    height: 520px;
+  }
+
+  .beginning__imgwrap::before{
+    right: -30px;
+    bottom: -30px;
+  }
+
+  .beginning__title{
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 600px){
+  .beginning{
+    padding: 80px 0;
+  }
+
+  .beginning__title{
+    font-size: 36px;
+  }
+
+  .beginning__text{
+    font-size: 16px;
+  }
+
+  .beginning__imgwrap img{
+    height: 380px;
+  }
+
+  .beginning__imgwrap::before{
+    right: -18px;
+    bottom: -18px;
+    width: 85%;
+    height: 88%;
+  }
+}/* ===== MENU HIGHLIGHTS (HOUSE SPECIALTIES) ===== */
+
+/* ===== MENU HIGHLIGHTS (HOUSE SPECIALTIES) ===== */
+
+.menu-highlights{
+  background: #FFF8ED;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.menu-highlights__container{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+}
+
+.menu-highlights__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 46px;
+}
+
+.menu-kicker{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size:20px;
+  letter-spacing: 2.4px;
+  font-weight: 800;
+  color: #8b5a2b;
+  margin-bottom: 18px;
+}
+
+.menu-title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 60px;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+
+.menu-link{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  color: #8b5a2b;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(139,90,43,0.55);
+  margin-top: 26px;
+}
+
+.menu-link span{ font-size: 18px; }
+
+/* ✅ BREAK OUT OF CONTAINER so 5th card can peek */
+.menu-row{
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+
+.menu-track{
+  /* ✅ Base (works great on 1700–2000px) */
+  --cardW: clamp(250px, 18.5vw, 310px);
+  --gap:   clamp(16px, 1.6vw, 26px);
+
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: nowrap;
+  width: max-content;
+
+  padding-left: calc((100vw - min(1240px, 92%)) / 2);
+
+  /* keep a little extra so the peek doesn't touch edge */
+  padding-right: 140px;
+  padding-bottom: 10px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.menu-track::-webkit-scrollbar{ display:none; }
+
+
+/* ✅ 1440 / 1400 laptops: force smaller cards so 5th peeks */
+@media (max-width: 1500px){
+  .menu-track{
+    --cardW: clamp(235px, 20vw, 285px);
+    --gap:   clamp(14px, 1.4vw, 22px);
+    padding-right: 120px;
+  }
+}
+
+/* ✅ 1366 / 1280 laptops */
+@media (max-width: 1380px){
+  .menu-track{
+    --cardW: clamp(220px, 16.5vw, 270px);
+    --gap:   clamp(12px, 1.2vw, 20px);
+    padding-right: 110px;
+  }
+}
+
+/* ✅ 1200 and below */
+@media (max-width: 1200px){
+  .menu-track{
+    --cardW: clamp(210px, 18vw, 255px);
+    --gap:   16px;
+    padding-right: 90px;
+  }
+}
+/* ===== CARD ===== */
+.menu-card{
+  width: var(--cardW);
+  flex: 0 0 var(--cardW);        /* ✅ never shrink */
+  background: #fbf7f1;
+  border: 1px solid rgba(58,58,58,0.10);
+  display: flex;
+  flex-direction: column;
+  transition: all 260ms ease;
+}
+
+
+.menu-card__img{
+  height: 320px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.menu-card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 380ms ease;
+}
+
+.menu-card__body{
+  background: #FFF3DF;
+  padding: 20px;
+  height: 170px;
+}
+
+.menu-card__name{
+   font-family: "Fraunces", serif;
+  font-weight: 400;          /* Regular */
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+    color: #3a3a3a;
+  margin-bottom: 10px;
+}
+
+.menu-card__desc{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;          /* Light */
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #777;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.menu-card:hover{
+  transform: translateY(-10px) scale(1.035);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+  border-color: rgba(139,90,43,0.35);
+  z-index: 5;
+  position: relative;
+}
+
+.menu-card:hover img{
+  transform: scale(1.08);
+}
+
+/* Disabled 5th card */
+.menu-card--disabled{
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.menu-card--disabled:hover{
+  transform: none;
+  box-shadow: none;
+}
+
+.menu-card--disabled img{
+  filter: grayscale(25%);
+}
+
+/* ✅ small screens: slightly less padding-right so it still feels correct */
+@media (max-width: 1200px){
+  .menu-track{ padding-right: 120px; }
+}
+@media (max-width: 900px){
+  .menu-track{ padding-right: 90px; }
+}
+
+/* ===== OUR GALLERY (FIGMA STYLE) ===== */
+.gallery{
+  background: #FFFCF9;
+  padding: 120px 0;
+}
+
+.gallery__container{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+}
+
+.gallery__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 46px;
+}
+
+.gallery__kicker{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2.4px;
+  font-weight: 800;
+  color: #8b5a2b;
+  margin-bottom: 18px;
+}
+
+.gallery__title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 64px;
+  font-weight: 500;
+  color: #3a3a3a;
+  line-height: 1.05;
+}
+
+.gallery__title span{
+  font-style: italic;
+  color: #8b5a2b;
+}
+
+.gallery__link{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  color: #8b5a2b;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(139,90,43,0.55);
+  white-space: nowrap;
+  margin-top: 26px;
+}
+
+.gallery__link span{
+  font-size: 18px;
+  transform: translateY(1px);
+}
+
+/* GRID LAYOUT */
+.gallery__grid{
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.gallery__item{
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.gallery__item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Left image big */
+.gallery__item--left{
+  height: 520px;
+}
+
+/* Middle tall */
+.gallery__item--mid{
+  height: 520px;
+}
+
+/* Right column split */
+.gallery__right{
+  display: grid;
+  grid-template-rows: 270px 1fr;
+  gap: 22px;
+}
+
+.gallery__item--rightTop{
+  height: 270px;
+}
+
+/* Quote tile */
+.gallery__quote{
+  position: relative;
+  background: #1f6f73;          /* teal */
+  border-radius: 6px;
+  padding: 70px 48px;
+  overflow: hidden;
+}
+
+/* Triangle 1 */
+.gallery__quote::before{
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: 110px;
+  top: 40px;
+
+  background: rgba(255,255,255,0.06);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Triangle 2 */
+.gallery__quote::after{
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  right: 25px;
+  top: 170px;
+
+  background: rgba(255,255,255,0.04);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(180deg);
+}
+
+.gallery__quote p{
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.55;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+
+.gallery__quote p{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.55;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.gallery__quote-watermark{
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  width: 380px;
+  height: 380px;
+  transform: translateY(-50%);
+  opacity: 0.12;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gallery__quote p{
+  position: relative;
+  z-index: 1;
+}
+
+
+/* If you DON'T have watermark image, use this fallback geometric watermark */
+@supports not (background: url("x") no-repeat center){
+  .gallery__quote-watermark{
+    background: none;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .gallery__top{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .gallery__title{
+    font-size: 48px;
+  }
+
+  .gallery__grid{
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__item--left,
+  .gallery__item--mid{
+    height: 420px;
+  }
+
+  .gallery__right{
+    grid-template-rows: 260px auto;
+  }
+}
+
+@media (max-width: 600px){
+  .gallery{
+    padding: 80px 0;
+  }
+  .gallery__title{
+    font-size: 38px;
+  }
+  .gallery__item--left,
+  .gallery__item--mid{
+    height: 320px;
+  }
+}
+
+/* ===== OUR TEAM (FIGMA MATCH) ===== */
+.team{
+  background: #FFF8ED;
+  padding: 120px 0;
+  overflow: hidden; /* hides the extra so the 4th is only partially visible */
+}
+
+.team__container{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+}
+
+/* top heading row */
+.team__top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 54px;
+}
+
+.team__kicker{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2.4px;
+  font-weight: 800;
+  color: #8b5a2b;
+  margin-bottom: 18px;
+}
+
+.team__title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.06;
+  color: #3a3a3a;
+  margin: 0;
+}
+
+.team__title span{
+  font-style: italic;
+  color: #8b5a2b;
+}
+
+.team__desc{
+     font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #777;
+    max-width: 601px;
+    margin-top: 42px;
+    margin-right: -130px;
+}
+
+/* row/track for partial 4th member */
+.team__row{
+  overflow: hidden;
+  margin: 0 -70px;
+
+}
+
+.team__track{
+  display: flex;
+  gap: 26px;
+  flex-wrap: nowrap;
+  width: max-content;   /* allows overflow so 4th peeks */
+  padding-bottom: 10px;
+}
+
+/* member layout (NOT a card look) */
+.team__member{
+  flex: 0 0 290px;      /* fixed width for same alignment */
+  display: flex;
+  flex-direction: column;
+  background: transparent;  /* IMPORTANT: removes “card” feeling */
+}
+
+/* tall image like figma */
+.team__photo{
+  width: 435px;
+  height: 596px;
+  overflow: hidden;
+  background: #eee; /* fallback while image loads */
+}
+
+.team__photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* bottom beige info strip */
+.team__meta{
+  background: #FFF8ED;
+  padding: 16px 16px 18px;
+  min-height: 110px;
+  border-top: 1px solid rgba(58,58,58,0.10);
+}
+
+.team__name{
+  font-family: "Fraunces", serif;
+  font-weight: 400;          /* Regular */
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+
+  color: #3a3a3a;
+  margin: 0 0 6px;
+}
+
+.team__role{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;          /* Regular */
+  font-size: 20px;
+  line-height: 120%;
+
+  letter-spacing: 0.08em;    /* ✅ 8% spacing */
+  text-transform: uppercase;
+
+  color: #8b5a2b;
+  margin: 0 0 6px;
+}
+
+.team__tenure{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;          /* Light */
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+
+  color: #777;
+  margin: 0;
+}
+
+/* disabled 4th member like screenshot */
+.team__member--disabled{
+  opacity: 0.22;
+  filter: saturate(0.3);
+  pointer-events: none;
+}
+
+/* optional: subtle hover only on active members */
+.team__member:not(.team__member--disabled){
+  transition: transform 260ms ease;
+}
+.team__member:not(.team__member--disabled):hover{
+  transform: translateY(-8px);
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .team__top{
+    flex-direction: column;
+    gap: 18px;
+  }
+  .team__desc{
+    margin-top: 0;
+    max-width: 620px;
+  }
+  .team__title{
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 600px){
+  .team{
+    padding: 80px 0;
+  }
+  .team__title{
+    font-size: 36px;
+  }
+  .team__member{
+    flex-basis: 260px;
+  }
+  .team__photo{
+    height: 320px;
+  }
+}
+
+
+/* ===== REVIEWS (AUTO SLIDER) ===== */
+.reviews{
+  background: #FFFCF9;
+  padding: 120px 0;
+}
+
+.reviews__container{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+}
+
+.reviews__grid{
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* left */
+.reviews__stars{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 26px;
+  font-size: 26px;
+  line-height: 1;
+  color: #c6862a; /* warm star */
+}
+.reviews__stars span{
+  transform: translateY(-1px);
+}
+
+/* slider */
+.reviews__slider{
+  position: relative;
+  min-height: 165px; /* keeps layout stable while changing */
+}
+
+.review{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  pointer-events: none;
+}
+
+.review.is-active{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.review__quote{
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 34px;
+  line-height: 1.35;
+  color: #3a3a3a;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* divider */
+.reviews__divider{
+  margin: 34px 0 26px;
+  height: 1px;
+  background: rgba(58,58,58,0.22);
+}
+
+/* bottom row */
+.reviews__bottom{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.reviews__source{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;              /* Medium */
+  font-size: 20px;
+  line-height: 120%;
+
+  letter-spacing: 0.08em;        /* ✅ 8% spacing */
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #8b5a2b;
+  margin: 0 0 8px;
+}
+
+.reviews__rating{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;              /* Regular */
+  font-size: 24px;
+  line-height: 150%;
+
+  letter-spacing: 0%;
+  text-align: center;
+
+  color: #3a3a3a;
+  margin: 0;
+}
+
+/* link */
+.reviews__link{
+      font-family: "IBM Plex Sans", sans-serif;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #8b5a2b;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(139,90,43,0.55);
+  white-space: nowrap;
+}
+.reviews__link span{
+  font-size: 18px;
+  transform: translateY(1px);
+}
+
+/* right image */
+.reviews__img{
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #eee;
+  border-radius: 2px;
+}
+.reviews__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* optional controls */
+.reviews__controls{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.reviews__btn{
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(58,58,58,0.18);
+  background: transparent;
+  color: #3a3a3a;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 220ms ease, background 220ms ease;
+}
+.reviews__btn:hover{
+  transform: translateY(-2px);
+  background: rgba(242,230,214,0.8);
+}
+
+.reviews__dots{
+  display: flex;
+  gap: 8px;
+}
+.dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(58,58,58,0.25);
+  cursor: pointer;
+}
+.dot.is-active{
+  background: rgba(139,90,43,0.75);
+}
+
+/* responsive */
+@media (max-width: 1000px){
+  .reviews__grid{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .reviews__img{
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px){
+  .reviews{
+    padding: 80px 0;
+  }
+  .review__quote{
+    font-size: 26px;
+  }
+  .reviews__bottom{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ✅ Hide slider controls (arrows + dots) - you said you don't want them */
+.reviews__controls{
+  display: none !important;
+}
+
+/* ✅ Reviews stack + animate */
+.reviews__slider{
+  position: relative;
+  min-height: 170px; /* keeps layout stable */
+}
+
+.review{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  pointer-events: none; /* prevents accidental selection */
+}
+
+.review.is-active{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Optional: make quote look premium */
+.review__quote{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-style: italic;
+  line-height: 1.35;
+  color: #3a3a3a;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .review__quote{ font-size: 26px; }
+  .reviews__slider{ min-height: 150px; }
+}
+
+/* ===== FOOTER (MATCH YOUR REFERENCE) ===== */
+.site-footer{
+  background: #1b1b1b;              /* ✅ solid dark */
+  color: rgba(255,255,255,0.70);
+  padding: 0;                        /* cleaner */
+}
+
+/* top divider line */
+.site-footer__line{
+  height: 1px;
+  background: rgba(255,255,255,0.20);
+}
+
+/* main grid */
+.site-footer__container{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  padding: 64px 0 52px;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.55fr 1.25fr 0.55fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* brand */
+.site-footer__logo img{
+  width: 140px;
+  height: auto;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.site-footer__desc{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+  color: rgba(255,255,255,0.42);
+}
+
+/* headings */
+.site-footer__title{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2.6px;
+  font-weight: 700;
+  color: #a67945;                    /* ✅ warm gold */
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+/* links */
+.site-footer__links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer__links li{ margin-bottom: 12px; }
+
+.site-footer__links a{
+  font-family: "IBM Plex Sans", sans-serif;
+  color: rgba(255,255,255,0.50);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 200ms ease;
+}
+
+.site-footer__links a:hover{
+  color: rgba(255,255,255,0.88);
+}
+
+/* visit text */
+.site-footer__text p{
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.46);
+}
+
+.site-footer__spaced{ margin-top: 14px; }
+
+/* social */
+.site-footer__social{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.site-footer__icon{
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.22);
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease;
+}
+
+.site-footer__icon img{
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+  display: block;
+}
+
+.site-footer__icon:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.40);
+  background: rgba(255,255,255,0.06);
+}
+
+/* ✅ bottom row */
+.site-footer__bottom{
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 22px 0;
+}
+
+.site-footer__bottom-inner{
+  width: min(1240px, 92%);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.site-footer__copy{
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  font-size: 15px;
+  color: rgba(255,255,255,0.35);
+}
+
+.site-footer__legal{
+  display: flex;
+  gap: 22px;
+}
+
+.site-footer__legal a{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.35);
+  transition: color 200ms ease;
+}
+
+.site-footer__legal a:hover{
+  color: rgba(255,255,255,0.70);
+}
+
+/* responsive */
+@media (max-width: 1100px){
+  .site-footer__container{
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 700px){
+  .site-footer__bottom-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px){
+  .site-footer__container{
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 52px 0 40px;
+  }
+}
+/* responsive */
+@media (max-width: 1100px){
+  .site-footer__container{
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px){
+  .site-footer{
+    padding-bottom: 55px;
+  }
+  .site-footer__container{
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-top: 55px;
+  }
+}
+
+/* ================= PARTNERSHIP CTA (MATCH SCREENSHOT) ================= */
+.partner-cta{
+  position: relative;
+  padding: 120px 0 0; /* top spacing + divider spacing */
+  background: #0f0f0f;
+  overflow: hidden;
+}
+
+/* soft blurred “spotlight” background like screenshot */
+.partner-cta::before{
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(900px 520px at 25% 30%, rgba(255,255,255,0.10), transparent 62%),
+    radial-gradient(900px 520px at 75% 60%, rgba(255,255,255,0.08), transparent 64%),
+    radial-gradient(1100px 700px at 50% 100%, rgba(255,255,255,0.06), transparent 65%);
+  filter: blur(6px);
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.partner-cta__inner{
+  position: relative;
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 120px; /* spacing before divider */
+}
+
+/* Title (Fraunces-like luxury look) */
+.partner-cta__title{
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 120%;
+  color: rgba(255,255,255,0.92);
+  margin: 0 0 22px;
+}
+
+/* Partnerships highlight */
+.partner-cta__title span{
+  color: #a67945;
+  font-style: italic;
+}
+
+/* Sub text */
+.partner-cta__text{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: rgba(255,255,255,0.45);
+  max-width: 860px;
+  margin: 0 auto 38px;
+}
+
+/* Button */
+.partner-cta__btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 54px;
+  padding: 0 46px;
+
+  border: 1px solid rgba(255,255,255,0.40);
+  background: transparent;
+  color: rgba(255,255,255,0.72);
+
+  text-decoration: none;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.08em; /* 8% */
+  text-transform: uppercase;
+
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.partner-cta__btn:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.05);
+}
+
+/* Divider line under CTA (like screenshot) */
+.partner-cta__divider{
+  height: 1px;
+  width: 100%;
+  background: rgba(255,255,255,0.22);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .partner-cta__title{ font-size: 42px; }
+  .partner-cta__text{ font-size: 15px; }
+}
+
+@media (max-width: 600px){
+  .partner-cta{ padding-top: 90px; }
+  .partner-cta__inner{ padding-bottom: 90px; }
+  .partner-cta__title{ font-size: 34px; }
+  .partner-cta__btn{ width: 92%; max-width: 380px; }
+}
+
+/* ===============================
+   LUXURY CURTAIN WIPE TRANSITION
+================================ */
+
+#pageCurtain {
+  position: fixed;
+  inset: 0;
+  background: #1a0c05; /* luxury dark brown */
+  transform: translateX(-100%);
+  z-index: 99999;
+  pointer-events: none;
+}
+
+/* Curtain Active Animation */
+#pageCurtain.is-active {
+  animation: curtainWipe 0.9s ease-in-out forwards;
+}
+
+@keyframes curtainWipe {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+body {
+  animation: fadeInPage 0.5s ease;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

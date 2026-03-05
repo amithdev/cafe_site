@@ -21,19 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+# SECURITY
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "unsafe-secret-key")
 
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = os.getenv(
-    "ALLOWED_HOSTS",
-    "breadsandbanter.com,www.breadsandbanter.com,.railway.app"
-).split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",") if not DEBUG else ["*"]
 
-CSRF_TRUSTED_ORIGINS = os.getenv(
-    "CSRF_TRUSTED_ORIGINS",
-    "https://breadsandbanter.com,https://www.breadsandbanter.com"
-).split(",")
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
 
 # Application definition
 

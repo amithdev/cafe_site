@@ -21,18 +21,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY", default="replace-this-later")
 
-DEBUG = os.getenv("DEBUG", "False").lower() == "true"
+DEBUG = config("DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
-# Remove empty strings
-ALLOWED_HOSTS = [h.strip() for h in ALLOWED_HOSTS if h.strip()]
+ALLOWED_HOSTS = config(
+    "ALLOWED_HOSTS",
+    default="127.0.0.1,localhost",
+    cast=lambda v: [h.strip() for h in v.split(",") if h.strip()]
+)
 
-# safe fallback for local dev
-if DEBUG:
-    ALLOWED_HOSTS += ["127.0.0.1", "localhost"]
-# Application definition
+CSRF_TRUSTED_ORIGINS = config(
+    "CSRF_TRUSTED_ORIGINS",
+    default="http://127.0.0.1:8000,http://localhost:8000",
+    cast=lambda v: [h.strip() for h in v.split(",") if h.strip()]
+)
 
 INSTALLED_APPS = [
     'django.contrib.admin',

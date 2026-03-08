@@ -304,7 +304,7 @@ font-weight: 800;
 }
 
 .principles__title{
-  font-family: "Playfair Display", serif;
+  font-family: "Fraunces", serif;;
   font-weight: 400;
   font-size: 44px;
   line-height: 1.15;
@@ -357,7 +357,7 @@ font-weight: 800;
 }
 
 .principles__name{
-  font-family: "Playfair Display", serif;
+  font-family: "Fraunces", serif;
   font-weight: 400;
   font-size: 34px;
   margin: 0 0 6px;
@@ -365,7 +365,7 @@ font-weight: 800;
 }
 
 .principles__role{
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 0.22em;
   color: rgba(0,0,0,0.28);
@@ -438,7 +438,7 @@ font-weight: 800;
 
 /* Title */
 .more-cafe__title{
-  font-family: "Playfair Display", serif;
+  font-family: "Fraunces", serif;
   font-weight: 400;
   font-size: 46px;
   line-height: 1.15;
@@ -449,7 +449,7 @@ font-weight: 800;
 /* Description */
 .more-cafe__desc{
   font-family: "IBM Plex Sans", sans-serif;
-font-weight: 20px;
+font-size: 15px;
   line-height: 1.85;
   color: rgba(0,0,0,0.45);
   margin: 0 auto;
@@ -480,8 +480,8 @@ font-weight: 20px;
 }
 
 .more-cafe__cardTitle{
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 17px;
   font-weight: 500;
   color: #8a5a21;
   margin: 0 0 10px;
@@ -490,7 +490,7 @@ font-weight: 20px;
 .more-cafe__cardText{
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 550;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.75;
   color: rgba(0,0,0,0.45);
   margin: 0;
@@ -545,7 +545,7 @@ font-weight: 20px;
 
 .quote-strip__text{
   margin: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   font-size: 56px;                /* large quote size */
   line-height: 1.25;

@@ -74,11 +74,12 @@ body{font-family: Arial, Helvetica, sans-serif;background:#0b0b0b}
 }
 
 .nav__links a{
+    font-family: "IBM Plex Sans", sans-serif;
   text-decoration:none;
   font-size: 16px;
   letter-spacing: 1.6px;
   color: rgba(255,255,255,0.80);
-  font-weight: 50px;
+      font-weight: 600;;
 }
 
 .nav__links a.is-active{
@@ -490,7 +491,7 @@ backdrop-filter: blur(2px);   /* optional: premium glass feel */
 /* watermark — move it up and keep it smaller */
 .quote-section__watermark{
       position: absolute;
-    left: -85px;
+    left: -340px;
     top: 50%;
     transform: translateY(-50%);
     width: 440px;
@@ -1397,7 +1398,7 @@ backdrop-filter: blur(2px);   /* optional: premium glass feel */
 .reviews__source{
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;              /* Medium */
-  font-size: 20px;
+  font-size: 19px;
   line-height: 120%;
 
   letter-spacing: 0.08em;        /* ✅ 8% spacing */
@@ -1411,7 +1412,7 @@ backdrop-filter: blur(2px);   /* optional: premium glass feel */
 .reviews__rating{
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;              /* Regular */
-  font-size: 24px;
+  font-size: 19px;
   line-height: 150%;
 
   letter-spacing: 0%;
@@ -1900,7 +1901,7 @@ backdrop-filter: blur(2px);   /* optional: premium glass feel */
 
 
 body {
-  animation: fadeInPage 0.5s ease;
+  animation: fadeInPage 1.0s ease;
 }
 
 @keyframes fadeInPage {

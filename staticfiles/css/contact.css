@@ -35,41 +35,36 @@
   z-index: 3;
 }
 
-/* center content */
 .contact-hero__content{
   position: relative;
-  
-    height: calc(78vh - 120px);
-    min-height: 500px;
+  height: calc(78vh - 120px);
   z-index: 3;
-  
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 140px 20px 120px;
 }
 
-/* title like screenshot */
 .contact-hero__title{
-  margin: 0 0 -85px;
   font-size: clamp(44px, 4.6vw, 76px);
   line-height: 1.05;
   letter-spacing: -0.5px;
   color: rgba(255,255,255,0.92);
   font-weight: 700;
   font-family: "Fraunces", serif;
+  margin: 0;
 }
 
-/* subtitle small + centered */
 .contact-hero__subtitle{
   font-family: "IBM Plex Sans", sans-serif;
-  margin: 0;
+  margin: 12px 0 0;
   font-size: 20px;
   line-height: 1.7;
   color: rgba(255,255,255,0.55);
   max-width: 880px;
 }
-
 /* ===== WHITE SECTION BELOW (like screenshot start) ===== */
 .contact-section{
   background: #f7f3ee;

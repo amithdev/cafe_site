@@ -355,50 +355,41 @@
 -->
 
 
-
 <section class="reviews">
   <div class="reviews__container">
-
     <div class="reviews__grid">
 
-      <!-- LEFT -->
       <div class="reviews__left">
-        <!-- stars -->
-        <div class="reviews__stars" aria-label="5 star rating">
-          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-        </div>
+        <div class="reviews__card">
+          <div class="reviews__stars" aria-label="5 star rating">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
 
-        <!-- rotating quote -->
-        <div class="reviews__slider" id="reviewsSlider">
+          <div class="reviews__slider" id="reviewsSlider">
+            <article class="review is-active">
+              <p class="review__quote">
+                “An Absolute Sanctuary In The City. The Pastries Are Divine, But The Atmosphere Keeps You Coming Back.”
+              </p>
+            </article>
 
-          <!-- REVIEW 1 -->
-          <article class="review is-active">
-            <p class="review__quote">
-              “An Absolute Sanctuary In The City. The Pastries Are Divine, But The Atmosphere Keeps You Coming Back.”
-            </p>
-          </article>
+            <article class="review">
+              <p class="review__quote">
+                “Beautiful place to work and unwind. Coffee is excellent, and the staff are genuinely warm.”
+              </p>
+            </article>
 
-          <!-- REVIEW 2 -->
-          <article class="review">
-            <p class="review__quote">
-              “Beautiful place to work and unwind. Coffee is excellent, and the staff are genuinely warm.”
-            </p>
-          </article>
+            <article class="review">
+              <p class="review__quote">
+                “The bread is amazing — fresh, flavorful, and worth the visit. Cozy vibes throughout.”
+              </p>
+            </article>
 
-          <!-- REVIEW 3 -->
-          <article class="review">
-            <p class="review__quote">
-              “The bread is amazing — fresh, flavorful, and worth the visit. Cozy vibes throughout.”
-            </p>
-          </article>
-
-          <!-- REVIEW 4 -->
-          <article class="review">
-            <p class="review__quote">
-              “Tried the pasta and dessert combo — everything felt handcrafted. Calm, clean, and premium.”
-            </p>
-          </article>
-
+            <article class="review">
+              <p class="review__quote">
+                “Tried the pasta and dessert combo — everything felt handcrafted. Calm, clean, and premium.”
+              </p>
+            </article>
+          </div>
         </div>
 
         <div class="reviews__divider"></div>
@@ -409,28 +400,12 @@
             <p class="reviews__rating">4.3/5 Average Rating</p>
           </div>
 
-          <!-- ✅ change this URL to your reviews page OR remove href if not ready -->
           <a class="reviews__link" href="#">
             Read All Reviews <span>→</span>
           </a>
         </div>
-
-        <!-- optional controls -->
-        <div class="reviews__controls">
-          <button class="reviews__btn" type="button" data-dir="-1" aria-label="Previous review">‹</button>
-
-          <div class="reviews__dots" aria-label="Review pagination">
-            <button type="button" class="dot is-active" aria-label="Go to review 1"></button>
-            <button type="button" class="dot" aria-label="Go to review 2"></button>
-            <button type="button" class="dot" aria-label="Go to review 3"></button>
-            <button type="button" class="dot" aria-label="Go to review 4"></button>
-          </div>
-
-          <button class="reviews__btn" type="button" data-dir="1" aria-label="Next review">›</button>
-        </div>
       </div>
 
-      <!-- RIGHT IMAGE -->
       <div class="reviews__right">
         <div class="reviews__img">
           <img src="{% static 'images/review-coffee.jpg' %}" alt="Coffee on table">

@@ -407,19 +407,17 @@
 
 .page-journal .stay__icon{
   width: 40px;
-  height: 45px;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  color: rgba(255, 255, 255, 0.75);
+    height: 45px;
+  object-fit: contain;
+  ;
 }
-
 .page-journal .stay__link:hover{
   transform: translateY(-1px);
   color: rgba(255, 255, 255, 0.92);
 }
-
+.page-journals .stay__icon{
+    filter: brightness(0) invert(1);
+}
 .page-journal .stay__link:hover .stay__icon{
   color: rgba(255, 255, 255, 0.92);
   border-color: rgba(255,255,255,0.4);

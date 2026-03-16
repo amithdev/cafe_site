@@ -447,8 +447,7 @@
 .page-contact .stay__icon{
   width: 40px;
   height: 45px;
-  border: 1px solid rgba(0,0,0,0.18);
-  border-radius: 8px;
+  
   display: grid;
   place-items: center;
   color: rgba(60, 60, 60, 0.75);
@@ -478,11 +477,9 @@
   color: #fff;
 
   /* background similar to screenshot */
-  background:
-    radial-gradient(1200px 600px at 20% 20%, rgba(255,255,255,0.06), transparent 55%),
-    radial-gradient(900px 500px at 85% 40%, rgba(255,255,255,0.05), transparent 60%),
-    linear-gradient(180deg, #1f1f1f 0%, #111111 100%);
+  background:#1b1b1b
 }
+    
 
 .events__inner{
   width: min(1180px, 92%);

@@ -239,6 +239,7 @@
 </section>
 <section class="stay">
   <div class="stay__inner">
+
     <h2 class="stay__title">Stay Connected.</h2>
 
     <p class="stay__sub">
@@ -246,30 +247,35 @@
     </p>
 
     <div class="stay__links">
-      <a class="stay__link" href="https://www.instagram.com/" target="_blank" rel="noopener">
-        <span class="stay__icon" aria-hidden="true">
-          <!-- Instagram icon (SVG) -->
-          <svg viewBox="0 0 24 24" width="22" height="22">
-            <path fill="currentColor"
-              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/>
-          </svg>
-        </span>
-        <span class="stay__text">Instagram</span>
-      </a>
 
-      <a class="stay__link" href="https://www.google.com/search?q=Breads+%26+Banter+Brookefield" target="_blank" rel="noopener">
-        <span class="stay__icon" aria-hidden="true">
-          <!-- Store/Profile icon (SVG) -->
-          <svg viewBox="0 0 24 24" width="22" height="22">
-            <path fill="currentColor"
-              d="M4 4h16l-1.5 6H5.5L4 4zm2.2 8h11.6l.6 8H5.6l.6-8zM9 14h6v2H9v-2z"/>
-          </svg>
-        </span>
-        <span class="stay__text">Google Profile</span>
-      </a>
-    </div>
+  <!-- Instagram -->
+  <a class="stay__link" href="https://www.instagram.com/" target="_blank">
+
+      <img src="{% static 'images/icon-instagram.svg' %}" 
+           alt="Instagram"
+           class="stay__icon">
+
+      <span>Instagram</span>
+
+  </a>
+
+
+  <!-- Google -->
+  <a class="stay__link" href="https://www.google.com/search?q=Breads+%26+Banter+Brookefield" target="_blank">
+
+      <img src="{% static 'images/icon-google.svg' %}" 
+           alt="Google Profile"
+           class="stay__icon">
+
+      <span>Google Profile</span>
+
+  </a>
+
+</div>
+
   </div>
 </section>
+
 <section class="events">
   <div class="events__inner">
     <h2 class="events__title">For Events & Collaborations.</h2>

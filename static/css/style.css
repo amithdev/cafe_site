@@ -1444,7 +1444,7 @@ backdrop-filter: blur(2px);   /* optional: premium glass feel */
   margin: 0;
   max-width: 740px;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(34px, 3vw, 43px);
+  font-size: clamp(34px, 3vw, 38px);
   line-height: 1.15;
   font-style: italic;
   font-weight: 500;
@@ -2244,6 +2244,31 @@ body {
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
+.order-card--swiggy{
+  background:linear-gradient(135deg,#ffb347,#ff7e00);
+  color:white;
+}
+
+/* Zomato */
+.order-card--zomato{
+  background:linear-gradient(135deg,#ff6a6a,#e23744);
+  color:white;
+}
+
+/* Ownly / Rapido */
+.order-card--ownly{
+  background:linear-gradient(135deg,#b06cff,#7a3cff);
+  color:white;
+}
+
+/* Links inside colored cards */
+.order-card--swiggy .order-card__link,
+.order-card--zomato .order-card__link,
+.order-card--ownly .order-card__link{
+  color:white;
+}
+
+
 .order-card:hover{
   transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(40, 30, 20, 0.06);
@@ -2257,7 +2282,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #1f1c1a;
+  color: #ffffff;
 }
 
 .order-card__sub{
@@ -2266,7 +2291,7 @@ body {
   font-size: 17px;
   font-weight: 600;
   line-height: 1.35;
-  color: #2f2a26;
+  color: #ffffff;
 }
 
 .order-card__desc{
@@ -2274,7 +2299,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 18px;
   line-height: 1.55;
-  color: rgba(0, 0, 0, 0.68);
+  color: rgba(255, 255, 255, 0.68);
   max-width: 320px;
 }
 
@@ -2286,13 +2311,13 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 19px;
   font-weight: 600;
-  color: #2f2a26;
+  color: #ffffff;
 }
 
 .order-card__link span{
   font-size: 22px;
   line-height: 1;
-  color: rgba(47, 42, 38, 0.45);
+  color: rgba(255, 255, 255, 0.45);
   transition: transform 0.25s ease;
 }
 

@@ -16,17 +16,14 @@
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
-  filter: blur(2px);
+  
 }
 
 /* overlay blur + dark tone like screenshot */
 .contact-hero__overlay{
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.40) 100%),
-    rgba(20,20,20,0.25);
-  backdrop-filter: blur(10px);
+ 
 }
 
 /* make navbar appear above overlay */

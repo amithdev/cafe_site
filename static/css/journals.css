@@ -15,14 +15,14 @@
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
-  filter: blur(0px);
+  
 }
 
 /* dark overlay */
 .journal-hero__overlay{
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,0.35);
+ 
 }
 
 /* warm left glow like screenshot */
